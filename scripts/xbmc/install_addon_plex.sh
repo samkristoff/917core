@@ -1,12 +1,9 @@
 #!/bin/bash
-echo Installing XBMC Addon - PLEX
-
-#Move To Package Directory
-cd /home/xbian/.xbmc/addons/packages
+echo -e "\nInstalling XBMC Addon - PLEX\n"
 
 #Download Plex Plugin, Extract And Move
-wget http://repository-plexbmc-addons.googlecode.com/files/plugin.video.plexbmc-3.1.5.zip
-unzip plugin.video.plexbmc-3.1.5.zip
-mv plugin.video.plexbmc
+wget http://repository-plexbmc-addons.googlecode.com/files/plugin.video.plexbmc-3.1.5.zip -O /home/xbian/.xbmc/addons/packages/plugin.video.plexbmc-3.1.5.zip
 
-echo XBMC Addon - PLEX Install Complete
+unzip /home/xbian/.xbmc/addons/packages/plugin.video.plexbmc-3.1.5.zip -d /home/xbian/.xbmc/addons/
+
+echo -e "\nXBMC Addon - PLEX Install Complete.  XBMC must be restarted for changes to take effect.\n"
